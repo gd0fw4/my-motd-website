@@ -2,42 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ALLSTAR Automix</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>ALLSTAR Automix</title>
     <style>
-        html, body {
+        /* Modern Reset */
+        * {
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #000;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0b0b0b; /* Deep dark background */
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            overflow: hidden; /* Prevents scrollbars in MOTD windows */
         }
 
-        .container {
-            max-width: 100%;
-            max-height: 100%;
-            padding: 10px;
-            box-sizing: border-box;
+        .wrapper {
+            width: 95%;
+            max-width: 900px;
             text-align: center;
         }
 
         img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+            display: block;
+            border: 2px solid #ffcc00; /* Gold border */
+            border-radius: 12px;
+            box-shadow: 0 0 30px rgba(255, 204, 0, 0.3);
+            background-color: #1a1a1a; /* Placeholder color while loading */
+        }
+
+        /* Subtle glow animation */
+        .glow {
+            animation: pulse 3s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 20px rgba(255, 204, 0, 0.2); }
+            50% { box-shadow: 0 0 40px rgba(255, 204, 0, 0.5); }
+            100% { box-shadow: 0 0 20px rgba(255, 204, 0, 0.2); }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <img src="allstartmotd.jpg" alt="ALLSTAR Automix Server">
+    <div class="wrapper">
+        <img src="allstarmotd.jpg" class="glow" alt="ALLSTAR Automix Server Banner">
     </div>
 
 </body>
